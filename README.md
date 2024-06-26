@@ -5,7 +5,7 @@ This is the Rememoir application by
 
 ## License
 
-ADD/REPLACE
+REPLACE
 
 ## Getting started
 
