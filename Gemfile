@@ -69,7 +69,7 @@ group :test do
   gem "capybara"
   gem "guard"
   gem "guard-minitest"
-  gem "minitest"
+  gem "minitest", require: true
   gem "minitest-reporters"
   gem "rails-controller-testing"
   gem "selenium-webdriver"
