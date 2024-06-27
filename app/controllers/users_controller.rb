@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @memories = @user.memories.paginate(page: params[:page])
   end
 
   def new
@@ -20,7 +21,7 @@ class UsersController < ApplicationController
     if @user.save
       reset_session
       log_in @user
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = "Welcome to the Rememoir App!"
       redirect_to @user
     else
       render 'new', status: :unprocessable_entity
