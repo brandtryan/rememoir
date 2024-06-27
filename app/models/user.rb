@@ -45,4 +45,9 @@ class User < ApplicationRecord
   def forget
     update_attribute(:remember_digest, nil)
   end
+
+  # Defines a proto-feed.
+  def feed
+    Memory.where("user_id = ?", id)
+  end
 end
