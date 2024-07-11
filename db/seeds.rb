@@ -19,6 +19,7 @@ end
 # Generate memories for a subset of users.
 users = User.order(:created_at).take(6)
 50.times do
-  content = Faker::Lorem.sentence(word_count: 5)
+#   content = Faker::Lorem.sentence(word_count: 5)
+  content = Faker::Quote.most_interesting_man_in_the_world
   users.each { |user| user.memories.create!(content: content) }
 end
