@@ -21,8 +21,8 @@ class MemoryTest < ActiveSupport::TestCase
     assert_not @memory.valid?
   end
 
-  test "content should be at most 140 characters" do
-    @memory.content = "a" * 141
+  test "content should be at most 500 characters" do
+    @memory.content = "a" * 501
     assert_not @memory.valid?
   end
 
